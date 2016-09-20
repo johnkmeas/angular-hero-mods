@@ -1,0 +1,13 @@
+<div *ngIf="hero">
+	<h2>{{hero.name}} details</h2>
+  <div><label>id: </label>{{hero.id}}</div>
+	<div><label>likes: </label>{{hero.likes}}</div>
+	<div>
+  	<label for="">name:</label>
+  	<input [(ngModel)]="hero.name" placeholder="name" type="text" />
+  </div>
+  		<button (click)="goBack()">Back</button>
+  <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
+  </div>
+  <button (click)="save()">Save</button>
+</div>
